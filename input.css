@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@layer{
+    .navbarpage{
+      @apply  p-5 text-2xl focus:text-violet-600  focus:font-semibold
+    }
+}
