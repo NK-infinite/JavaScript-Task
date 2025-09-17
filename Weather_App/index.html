@@ -6,122 +6,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App</title>
   <link rel="stylesheet" href="../output.css">
-
-  <style>
-
-  </style>
 </head>
-
 <body>
   <div>
-
-
     <div id="navbar"></div>
 
-
-
     <!-- Banner -->
-
     <div class="sm:h-120 flex  lg:flex lg:flex-row md:flex-col sm:flex-col  lg:justify-start bg-cover bg-center"
       style="background-image: url('./assets/images/banner.png');">
-
       <!-- text -->
       <div class="flex-row justify-baseline  p-10 lg:p-20 md:p-20 lg:pl-40 md:pl-40">
-
         <div class="flex flex-col text-white">
-
           <div class="flex flex-col justify-between ">
             <p class="text-4xl lg:text-7xl md:text-5xl sm:text-4xl font-bold text-shadow-black text-shadow-sm ">
               WeatherTrip</p>
             <p class="lg:text-2xl pt-20 mb-20 lg:w-100">Your Weather, Your Journey: Always a Step Ahead with Our
               <b> Weather Forecasting App! </b>
             </p>
-
           </div>
         </div>
       </div>
-
     </div>
-
 
     <div
       class="lg:flex  flex-col lg:flex-row lg:justify-between items-center lg:items-start px-5 sm:px-10 md:px-20 lg:px-40">
-
       <div class="flex-col justify-between  pt-20 lg:pl-30 sm:pl-30 ">
         <div class="font-semibold mb-10 ">Stay prepared for upcomming weather with <br> <b>daily wheather news.</b>
         </div>
-        <button class="border-2 rounded-4xl p-2 px-10 text-violet-500 font-bold mb-10">Explore</button>
+        <a href="./news.html" class="border-2 rounded-4xl p-2 px-10 text-violet-500 font-bold mb-10">Explore</a>
       </div>
 
       <!-- box -->
-
       <div class="flex-col  bg-white  rounded-2xl shadow-lg relative sm:mb-30 lg:-mt-55">
-
         <div class="flex flex-row   justify-center  sm:justify-around">
           <img class="p-4" src="./assets/images/menu.png" alt="">
           <p class="p-4 text-violet-600 font-semibold">Charleston</p>
           <img class="p-4" src="./assets/images/plus-circle.png" alt="">
         </div>
-
         <div class="flex flex-row justify-center ">
           <img class="p-4" src="./assets/images/mockupWeatherExample.png" alt="">
         </div>
-
         <div class="flex flex-row justify-around">
           <div class="flex flex-col justify-items-start">
-            <p class="text-sm font-semibold"> TODAY</p>
-            <p>24 jun , Friday</p>
-            <p>clean</p>
-            <p>10.6 KM/h</p>
-            <p>34%</p>
-          </div>
+          <p class="text-sm font-semibold">TODAY</p>
+          <div id="dateindex"></div>
+          <div id="weatherDescript"></div>
+          <div id="wind"></div>
+    <div id="humidity"></div>
+</div>
 
-          <div class="flex-col justify-items-end">
-            <p class="text-6xl">20:00</p>
-            <p class="text-3xl">24</p>
-          </div>
+<div class="flex-col justify-items-end">
+    <div id="timeindex" class="text-6xl"></div>
+    <div id="tempindex" class="text-3xl"></div>
+</div>
+</div>
 
-        </div>
-
-
-        <div class=" grid grid-cols-5  lg:flex  lg:flex-row lg:justify-around justify-items-center  p-3">
-
-          <div class="bg-violet-500 flex-col p-3 rounded-2xl">
-            <p>Now</p>
-            <img src="./assets/icon/Vector.png" alt="">
-            <p>24</p>
-          </div>
-          <div class="bg-violet-500 flex-col p-3 rounded-2xl">
-            <p>Now</p>
-            <img src="./assets/icon/Vector.png" alt="">
-            <p>24</p>
-          </div>
-          <div class="bg-violet-500 flex-col p-3 rounded-2xl">
-            <p>Now</p>
-            <img src="./assets/icon/Vector.png" alt="">
-            <p>24</p>
-          </div>
-          <div class="bg-violet-500 flex-col p-3 rounded-2xl">
-            <p>Now</p>
-            <img src="./assets/icon/Vector.png" alt="">
-            <p>24</p>
-          </div>
-          <div class="bg-violet-500 flex-col p-3 rounded-2xl">
-            <p>Now</p>
-            <img src="./assets/icon/Vector.png" alt="">
-            <p>24</p>
-          </div>
-
-        </div>
-
+        <!-- box Forecast -->
+        <div id="indexforecast" class="grid lg:grid-cols-5 lg:gap-0 gap-10 grid-cols-3  lg:flex  flex-row justify-around  justify-items-center  p-3"> </div>
       </div>
-
     </div>
 
     <div class="lg:flex  justify-around ">
-
       <div class=" lg:pl-35 md:justify-items-center sm:pl-35">
-
         <img class="lg:-mt-60 " src="./assets/images/weatherTrip-banner 1.png" alt="" srcset="">
       </div>
 
@@ -129,67 +75,37 @@
         <p class="text-4xl">Don´t guess the Weather.</p>
         <p class="mt-5 lg:w-90  ">Clime for year-round wheather forecasts for your location and across the
           world</p>
-        <button class=" mt-5 bg-violet-700 p-2 px-20 mb-20 rounded-4xl text-white"> Get Started</button>
+        <a href="./weather.html" class=" mt-5 bg-violet-700 p-2 px-20 mb-20 rounded-4xl text-white"> Get Started</a>
       </div>
-
     </div>
-
-
-
 
     <div>
-      <div
-        class="sm:h-120 flex  lg:flex lg:flex-row-reverse md:flex-col sm:flex-col  lg:justify-start bg-cover bg-center"
-        style="background-image: url('./assets/images/andrea-cau-nV7GJmSq3zc-unsplash\ 1.png');">
-
-        <div class="flex-row justify-center p-10 lg:p-20 md:p-20 lg:pr-40 md:pr-40">
-
-          <div class="flex flex-col text-white">
-
-            <div class="flex flex-col justify-between ">
-              <a
-                class="text-4xl lg:text-7xl md:text-5xl flex flex-row sm:text-4xl font-bold text-shadow-black text-shadow-sm ">WeatherTrip.
-                <span class="text-sm mt-5 lg:mt-12"> news</span> </a>
-              <p class="lg:text-2xl pt-20 mb-20 lg:w-100">Your guide to weather: Accurate forecasts,
-                storm warnings, tips for preparing and more.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </div>
+      <div id="weathertripnewscomponet"></div>
     </div>
 
-
     <!-- NEWS HADEING -->
-    <div class="flex flex-row justify-between items-center mt-20 lg:px-55 px-6 mb-10">
+    <div class="flex flex-row justify-between items-center mt-20 lg:px-50 px-6 mb-10">
       <p class="text-2xl justify-center lg:text-5xl whitespace-nowrap">LASTEST NEWS</p>
       <div class="lg:block sm:hidden md:hidden border-2 border-violet-800  lg:w-full h-0 ml-10"></div>
     </div>
 
     <!-- NEWS -->
     <div class="lg:flex lg:flex-row lg:justify-around px-5">
-
       <!-- first div box (newsBox is my Tailwind componet)-->
-      <div class="newsbox">
+      <div class="sm:newsbox lg:pl-45 lg:items-center md:items-center">
         <div>
-          <img src="./assets/images/unsplash_GXEZuWo5m4I.png" alt="">
+          <img class="lg:w-120" src="./assets/images/unsplash_GXEZuWo5m4I.png" alt="">
         </div>
-
         <div class="flex flex-col ">
           <a class="text-violet-600 text-wrap "> Heavy rain in New Orleans</a>
           <p>Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat elementum.
             Faucibus faucibus tempor habitasse amet auctor. Sit lorem a cursus a. Donec vitae
             massa et lectus dolor in.</p>
         </div>
-
       </div>
-
-
 
       <!-- second box -->
       <div class="flex flex-col justify-around items-center lg:pr-40">
-
         <div class="flex flex-row-reverse items-center">
           <div>
             <img class="w-80 mb-10" src="./assets/images/unsplash_JHyiw_dpALk (2).png" alt="">
@@ -202,10 +118,7 @@
           </div>
         </div>
 
-
         <div class="flex flex-row-reverse items-center">
-
-
           <div>
             <img class="w-80 mb-10" src="./assets/images/unsplash_JHyiw_dpALk.png" alt="">
           </div>
@@ -215,8 +128,7 @@
               Faucibus faucibus tempor habitasse amet auctor. Sit lorem a cursus a. Donec vitae
               massa et lectus dolor in.</p>
           </div>
-
-        </div>
+       </div>
 
 
         <div class="flex flex-row-reverse items-center ">
@@ -230,24 +142,22 @@
               massa et lectus dolor in.</p>
           </div>
         </div>
-
       </div>
-
     </div>
 
 
     <!-- NEWS Hading -->
-    <div class="flex flex-row justify-between items-center mt-20 lg:px-55 px-5 mb-10">
+    <div class="flex flex-row justify-between items-center mt-20 lg:px-50 px-5 mb-10">
       <p class="text-2xl lg:text-5xl whitespace-nowrap">ALL AROUND THE WORLD</p>
       <div class="lg:block sm:hidden md:hidden border-2 border-violet-800  lg:w-full h-0 ml-10"></div>
     </div>
 
-    <div class="lg:flex lg:flex-row lg:justify-between items-center lg:px-30 mb-10">
+    <div class="lg:flex lg:flex-row lg:justify-between items-center lg:px-20 lg:mr-20 mb-10">
 
       <!-- first div box -->
-      <div class="newsbox">
+      <div class="newsbox md:items-center">
         <div>
-          <img src="./assets/images/unsplash_GXEZuWo5m4I.png" alt="">
+          <img class="w-150" src="./assets/images/unsplash_GXEZuWo5m4I.png" alt="">
         </div>
 
         <div class="flex flex-col ">
@@ -261,9 +171,9 @@
 
 
       <!-- first div box -->
-      <div class="newsbox">
+      <div class="newsbox md:items-center">
         <div>
-          <img src="./assets/images/unsplash_GXEZuWo5m4I.png" alt="">
+          <img class="w-150" src="./assets/images/unsplash_GXEZuWo5m4I.png" alt="">
         </div>
 
         <div class="flex flex-col ">
@@ -275,10 +185,9 @@
 
       </div>
     </div>
-     
+
     <div id="footer"></div>
   </div>
 </body>
-<script src="./index.js"></script>
-
+<script type="module" src="./index.js"></script>
 </html>

@@ -1,51 +1,59 @@
  body {
-            background-color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            padding: 30px;
-        }
+     background-color: black;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     padding: 30px;
+ }
 
-        .Calculatorbody {
-            border-radius: 20px;
-            border-style: solid;
-            border-color: white;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            background-color:gray ;
-        }
+ .Calculatorbody {
+     border-radius: 20px;
+     border-style: solid;
+     border-color: white;
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     background-color: gray;
+ }
 
-        input {
-            padding: 10px;
-            margin-bottom: 10px;
-              border-radius: 20px;
-            border-style: solid;
-            font-size: large;
-        }
+ .hading {
+     display: flex;
+     justify-content: center;
+     color: white;
+     font-size: x-large;
+     margin-bottom: 20px;
+ }
 
-        .numbuttons {
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-            gap: 5px;
-        }
+ input {
+     padding: 10px;
+     margin-bottom: 10px;
+     border-radius: 20px;
+     border-style: solid;
+     font-size: large;
+ }
 
-        .numbutton {
-            background-color: white;
-            margin: 5px;
-            font-size: 20px;
-            padding: 20px;
-            border-radius: 20px;
-            border-style: solid;
-            border-color: black;
-        }
+ .numbuttons {
+     display: grid;
+     grid-template-columns: auto auto auto auto;
+     gap: 5px;
+ }
 
-        a {
-           text-align: center;
-           display: flex;
-           justify-content: center;
-          align-items: center;
-          height: 10px;
+.numbutton {
+     background-color: white;
+     margin: 5px;
+     font-size: 20px;
+     padding: 20px;
+     border-radius: 20px;
+     border-style: solid;
+     border-color: black;
+ }
 
-        }
+ a {
+     text-align: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 10px;
+
+ }

@@ -1,11 +1,11 @@
 const Input = document.getElementById('input');
-const buttons = ['0','1','2','3','4','5','6','7','8','9','.','+','-','*','/'];
+const buttons = ['0','1','2','3','4','5','6','7','8','9','.'];
 
 let current = "";
-
 let num1 = null;
 let operator = null;
 
+// Number buttons
 buttons.forEach(id => {
     document.getElementById(id).addEventListener('click', () => {
         Input.value += id;
@@ -21,14 +21,14 @@ document.getElementById('AC').addEventListener('click', () => {
     operator = null;
 });
 
-// removw one by one 
+// remove last char
 document.getElementById('C').addEventListener('click', () => {
     Input.value = Input.value.slice(0, -1);
     current = current.slice(0, -1);
 });
 
-// operators (+ - * /)
-['+','-','*','%','/'].forEach(op => {
+// operators (+ - * / %)
+['+','-','*','/','%'].forEach(op => {
     document.getElementById(op).addEventListener('click', () => {
         if (current !== "") {
             num1 = parseFloat(current);
@@ -39,7 +39,7 @@ document.getElementById('C').addEventListener('click', () => {
     });
 });
 
-// calculating logic
+// calculate result
 document.getElementById('=').addEventListener('click', () => {
     if (num1 !== null && operator && current !== "") {
         let num2 = parseFloat(current);
@@ -56,10 +56,10 @@ document.getElementById('=').addEventListener('click', () => {
                 result = num1 * num2;
                 break;
             case '/':
-                result = num1 / num2;
+                result = num2 !== 0 ? num1 / num2 : "Error"; // divide by zero safe
                 break;
-                case '%':
-                result = num1 / 100 * num2;
+            case '%':
+                result = num1 /100 * num2; // modulo logic
                 break;
             default:
                 result = num2;

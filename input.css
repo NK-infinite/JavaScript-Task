@@ -11,7 +11,9 @@
      @apply flex-col space-y-3 mb-20
     }
     .bbcnewheding{
-     @apply font-bold text-1xl text-wrap 
+     @apply font-bold  text-wrap 
     }
-    
+    .breakingnews{
+      @apply flex flex-col items-center lg:items-start lg:pt-10 pt-20  
+    }   
 }

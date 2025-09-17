@@ -7,41 +7,23 @@
   <title>WeatherTrip News</title>
   <link rel="stylesheet" href="../output.css">
   <link rel="stylesheet" href="../input.css">
-  <style>
-
-  </style>
 </head>
 
 <body class="bg-white ">
-   
   
   <!-- Nav Bar -->
   <div id="navbar"></div>
+ 
+  <div class="lg:px-0 px-2">
 
-  <div class="px-2">
-    <!-- Hero Section -->
-    <div class="sm:h-120 flex  lg:flex lg:flex-row-reverse md:flex-col sm:flex-col  lg:justify-start bg-cover bg-center"
-      style="background-image: url('./assets/images/andrea-cau-nV7GJmSq3zc-unsplash\ 1.png');">
-      <div class="flex-row justify-center p-10 lg:p-20 md:p-20 lg:pr-40 md:pr-40">
-        <div class="flex flex-col text-white">
-          <div class="flex flex-col justify-between ">
-            <a
-              class="text-4xl lg:text-7xl md:text-5xl flex flex-row sm:text-4xl font-bold text-shadow-black text-shadow-sm ">WeatherTrip.
-              <span class="text-sm mt-5 lg:mt-12"> news</span> </a>
-            <p class="lg:text-2xl pt-20 mb-20 lg:w-100">Your guide to weather: Accurate forecasts,
-              storm warnings, tips for preparing and more.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </div>
+    <!-- Banner -->
+    <div id="weathertripnewscomponet"></div>
 
     <!-- Main Content Grid -->
     <div class=" mx-auto p-4 md:p-8 lg:p-12 my-8 md:my-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
       <!-- Left Side News -->
       <div class="lg:col-span-2">
-        <div class="  p-6 md:p-8">
+        <div class="p-6 md:p-8">
           <p class="text-2xl md:text-4xl font-semibold mb-4">
             Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat elementum. Faucibus faucibus tempor
             habitasse amet auctor. Sit lorem a cursus a. Donec vitae massa et lectus dolor in.
@@ -52,12 +34,12 @@
           <div class="flex flex-row justify-between items-start sm:items-center">
             <div class="flex">
               <img src="./assets/images/unsplash_JoKS3XweV50.png" alt="" class="w-10 h-10  rounded-full">
-
               <div>
                 <p class="text-sm font-semibold">Becky Ferreira</p>
                 <p class="text-xs text-gray-500">Author</p>
               </div>
             </div>
+
             <div>
               <p class="text-xs text-gray-500">BBC News</p>
               <p class="text-xs text-gray-500">26/06/2024</p>
@@ -72,48 +54,60 @@
 
       <!-- Right News -->
       <div class="col-span-1">
+        <div class="rightnewscomponet"></div>
+        <div class="rightnewscomponet"></div>
+        <div class="rightnewscomponet"></div>
+        <div class="rightnewscomponet"></div>
+      </div>
+    </div>
 
-        <div class="bbcnewbox">
-          <p class="bbcnewheding ">BBC News</p>
-          <p>Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Magni, magnam commodi
-            Vel, ullam. Repellendus tempore cumque eos nulla?</p>
-          <a class="text-violet-500">Access article</a>
+    <!-- Breaking News -->
+    <div id="barkingnewscomponet"></div>
+
+
+
+    <!-- Featured News-->
+    <div class="flex flex-col " >
+      <!-- heding -->
+      <div class="flex flex-row lg:pl-20 lg:justify-start text-2xl sm:justify-center mt-20">Featured</div>
+
+
+
+      <!-- News -->
+      <div class="flex flex-col lg:flex-row lg:pl-0 lg:pr-0 lg:justify-around ">
+        <div class="breakingnews">
+          <img class="w-150" src="./assets/images/unsplash_rezrVlOiPP0 (3).png" alt="">
+          <div class="flex flex-row justify-start items-center gap-10">
+            <div class="font-light"></div>
+            <p class="font-bold">BBC News</p>
+          </div>
+          <div>
+            <p class="w-100 lg:w-150 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+
+              cupiditate illo assumenda earum labore molestiae repellendus enim,</p>
+          </div>
         </div>
 
-        <div class="bbcnewbox">
-          <p class="bbcnewheding">BBC News</p>
-          <p>Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Magni, magnam commodi
-            Vel, ullam. Repellendus tempore cumque eos nulla?</p>
-          <a class="text-violet-500">Access article</a>
-        </div>
-
-
-        <div class="bbcnewbox">
-          <p class="bbcnewheding">BBC News</p>
-          <p>Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Magni, magnam commodi
-            Vel, ullam. Repellendus tempore cumque eos nulla?</p>
-          <a class="text-violet-500">Access article</a>
-        </div>
-
-        <div class="bbcnewbox">
-          <p class="bbcnewheding">BBC News</p>
-          <p>Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Magni, magnam commodi
-            Vel, ullam. Repellendus tempore cumque eos nulla?</p>
-          <a class="text-violet-500">Access article</a>
+        <div class="breakingnews">
+          <img class="w-150" src="./assets/images/unsplash_rezrVlOiPP0 (4).png" alt="">
+          <div class="flex flex-row justify-start items-center gap-10">
+            <div class="date1 font-light "></div>
+            <p class="font-bold">BBC News</p>
+          </div>
+          <div>
+            <p class="w-100 lg:w-150">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              cupiditate illo assumenda earum labore molestiae repellendus enim,</p>
+          </div>
         </div>
       </div>
     </div>
-    
-    <div class="text-2xl-8">Breaking news</div>
   </div>
+
+
 
   <!-- Footer -->
   <div id="footer"></div>
 </body>
-<script src="./index.js"></script>
+<script type="module" src="./index.js"></script>
 
 </html>

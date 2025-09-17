@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>currency conversion</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<style>
-
-</style>
 
 <body>
-
     <div class="mybody">
         <div>
-            <select class="selectccountry2" id="from" onchange="getcureencyApi(this.value)" onchange="getFlagApi()">
+            <label class="label" for="">From</label>
+            <select class="selectccountry2" id="from" onchange="getcureencyApi()">
                 <option value="AED">AED - UAE Dirham</option>
                 <option value="AFN">AFN - Afghan Afghani</option>
                 <option value="ALL">ALL - Albanian Lek</option>
@@ -174,10 +170,12 @@
                 <option value="ZAR">ZAR - South African Rand</option>
                 <option value="ZMW">ZMW - Zambian Kwacha</option>
                 <option value="ZWL">ZWL - Zimbabwean Dollar</option>
-
             </select>
 
-            <select class="selectccountry2" id="to" onchange="getcureencyApi(this.value)">
+            <img class="icon" id="valueExchange" src="./assets/refresh.png" alt="" srcset="">
+
+            <label class="label" for="">TO</label>
+            <select class="selectccountry2" id="to" onchange="getcureencyApi()">
                 <option value="AED">AED - UAE Dirham</option>
                 <option value="AFN">AFN - Afghan Afghani</option>
                 <option value="ALL">ALL - Albanian Lek</option>
@@ -336,53 +334,32 @@
                 <option value="ZAR">ZAR - South African Rand</option>
                 <option value="ZMW">ZMW - Zambian Kwacha</option>
                 <option value="ZWL">ZWL - Zimbabwean Dollar</option>
-
-
             </select>
-
         </div>
-     
 
-             <div class="SHOWDATA">
+        <div class="SHOWDATA"></div>
         
-             </div>
-                <input id="Amount" type="text" placeholder="Amounts">
-            
-            
-            
-            
-            <div class="numbuttons">
-                
-                <button class="numbutton" style="background-color:yellow;" id="C">C</button>
-                <button class="numbutton" style="background-color: red;" id="AC">AC</button>
-                
-                <button class="numbutton" id="7">7</button>
-                <button class="numbutton" id="8">8</button>
-                <button class="numbutton" id="9">9</button>
-                
-                <button class="numbutton" id="4">4</button>
-                <button class="numbutton" id="5">5</button>
-                <button class="numbutton" id="6">6</button>
-                
-                <button class="numbutton" id="1">1</button>
-                <button class="numbutton" id="2">2</button>
-                <button class="numbutton" id="3">3</button>
-                
-                <button class="numbutton" id="0">0</button>
-                <button class="numbutton" style="font-size: xx-large;" id=".">.</button>
-                <button class="numbutton" id="result">Result</button>
-                <button class="numbutton" id="Exchange">Exchange</button>
-                
-            </div>
-            
-            
+        <input id="Amount" type="numb" placeholder="From Amounts">
 
+        <div class="numbuttons">
+            <button id="C" style="background-color:yellow;">C</button>
+            <button id="AC" style="background-color: red;">AC</button>
+
+            <button id="0">0</button>
+            <button id="1">1</button>
+            <button id="2">2</button>
+            <button id="3">3</button>
+            <button id="4">4</button>
+            <button id="5">5</button>
+            <button id="6">6</button>
+            <button id="7">7</button>
+            <button id="8">8</button>
+            <button id="9">9</button>
+            <button id=".">.</button>
+            <button id="result">=</button>
+        </div>
     </div>
+    <script src="./index.js"></script>
 </body>
-<script src="./index.js"></script>
-
-<Script>
-
-</Script>
 
 </html>

@@ -1,12 +1,10 @@
- body {
+body {
      background-color: black;
      display: flex;
      justify-content: center;
      align-items: center;
      height: 100vh;
-
  }
-
  .mybody {
      border-radius: 20px;
      border-style: solid;
@@ -20,10 +18,9 @@
  .numbuttons {
      display: grid;
      grid-template-columns: auto auto auto auto;
-     gap: 5px;
- }
+      }
 
- .numbutton {
+button{
      background-color: gray;
      margin: 5px;
      font-size: 20px;
@@ -34,8 +31,8 @@
  }
 
  input {
-     padding: 10px;
-     margin: 20px;
+     padding: 15px;
+     margin-top: 15px;
      margin-bottom: 10px;
      border-radius: 20px;
      border-style: solid;
@@ -43,15 +40,16 @@
      display: flex;
      justify-content: center;
      align-items: center;
- }
+     flex-direction: row;
+    
+   
+    }
 
  .selectccountry2 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 20px;
-    margin-right: 30px;
-    margin: 20px;
+    padding: 15px;
     border-style: solid;
     border-radius: 20px;
  }
@@ -66,4 +64,26 @@
    display: flex;
    flex-direction: row; 
    text-align: center;
+}
+
+
+.label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+    color: green;
+    font-size: large;
+    font-weight: bold;
+
+}
+
+.icon{
+    display: flex;
+    margin-left:150px;
+    margin-top: 20px; 
+    margin-bottom: 10px; 
+    justify-content: center;
+    align-items: center;
+    height: 30px;
 }

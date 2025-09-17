@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="../output.css">
+</head>
+
+<body class="lg:px-0 px-3">
+
+      <!-- NAVBAR -->
+        <div id="navbar" class="mb-10"></div>
+
+        <!-- Searcher bar -->
+        <div class="flex flex-col lg:flex-row justify-between  lg:mx-30">
+            <div>
+                <div class="text-2xl mb-3 lg:text-4xl">Weather Forecast </div>
+                <div id="dateweather" class="font-light"> </div>
+            </div>
+
+            <div>
+                <div class="flex my-1 border rounded-4xl px-3">
+                  <a id="Search" class="pt-1"><img src="./assets/icon/search.png" alt=""></a>
+                  <input id="cityInput" class="my-1 px-5  flex items-center bg-transparent focus:bg-transparent focus:outline-none " type="text" placeholder="New York ">
+                </div>
+            </div>
+        </div>
+        
+            <!-- banner -->
+            <div class="relative  lg:mx-30 my-10 ">
+      <img src="./assets/images/Rectangle 6.png" alt="" class="w-full  h-120 lg:h-80 object-cover rounded-xl">
+      <div class="absolute inset-0 flex flex-col lg:flex-row justify-center  lg:justify-between items-center px-10 text-white">
+        <div class="flex flex-col justify-between gap-4">
+          <div>
+            <h1 id="cityname" class=" text-3xl font-bold "></h1>
+            <p id="country" class="text-lg text-gray-200 "></p>
+          </div>
+          <div id="tempindex" class="text-6xl font-bold"></div>
+        </div>
+        <div class="flex flex-col items-start gap-2 text-lg">
+          <img id="weathericon" src="" alt="">
+
+         <div class="flex"><p id="desc"></p></div>
+         <div class="flex"><img src="./assets/icon/arrow-up.png" alt=""><p id="temp_max"></p></div> 
+         <div class="flex"><img class="rotate-180" src="./assets/icon/arrow-up.png" alt=""><p id="temp_min"></p></div> 
+         <div class="flex"><img src="./assets/icon/Vector (1).png" alt=""><p id="wind"></p></div> 
+         <div class="flex" ><img src="./assets/icon/droplet.png" alt=""><p id="humidity"></p></div> 
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-row  gap-6 my-6 lg:mx-30">
+      <button id="Today"  class="px-5 py-2 rounded-xl text-2xl focus:font-bold">Today</button>
+      <button id="Week" class="px-5 py-2 rounded-xl text-2xl focus:font-bold">Week</button>
+    </div>
+
+
+    <!-- Forecast Cards -->
+    <div id="Forecast" class=" lg:mx-30 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 ">
+   
+    </div>
+
+    <!-- Highlight Section -->
+    <div class="justify-start w-1/2   lg:mx-24 my-10 lg:px-6">
+      <h2 class="text-2xl font-semibold mb-5">Today's Highlight</h2>
+      
+      <div class="flex flex-row gap-5"> 
+        
+        <div class="flex-1 bg-gray-200 rounded-xl border-2 border-gray-500 p-5">
+          <p id="highlightDate"></p>
+          <div class="text-lg font-bold flex "> 
+            <div class="flex ">
+              <img src="./assets/icon/arrow-up (1).png" alt="">
+              <p id="highHighlight" class="pr-20"> </p> 
+            </div> 
+             <div class="flex">
+                <img class="rotate-180" src="./assets/icon/arrow-up (1).png" alt="">
+               <p id="lowHighlight"></p> </div>
+              </div>
+        </div>
+       
+        <div class="flex-1 bg-gray-200 rounded-xl border-2 border-gray-500 p-5">
+          <p class="text-sm">Temp Variation</p>
+          <p id="variation" class="text-lg font-bold"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Breaking News -->
+            <div id="barkingnewscomponet" class="my-20"></div>
+            <!-- ALL News -->
+            <div class="py-5 px-20 mx-20 my-15 flex flex-row justify-center border border-black bg-stone-200 "><button>
+            All New </button></div>
+            <div id="footer"></div>
+</body>
+<script>
+</script>
+  <script  type="module" src="./weather.js"></script>
+</html>
