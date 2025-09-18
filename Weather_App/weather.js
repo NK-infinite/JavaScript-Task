@@ -1,22 +1,19 @@
 import { API_KEY } from "../config.js"
 
-
 async function getComponent(id, file) {
   const res = await fetch(file);
   const html = await res.text();
   document.getElementById(id).innerHTML = html;
   }
-  
+
   getComponent("navbar", "./htmlcomponet/navbar.html");
   getComponent("barkingnewscomponet", "./htmlcomponet/breakingnews.html");
   getComponent("footer", "./htmlcomponet/footer.html");
-  
-  
+    
   const city = "Surat"
   
   // Call Weather&Forecast 
   loadWeather(city , API_KEY)
-  
   //button
   document.getElementById('Search').addEventListener('click', () => {
     const city = document.getElementById("cityInput").value;
@@ -25,10 +22,7 @@ async function getComponent(id, file) {
   
   async function loadWeather(city, API_KEY) {
   try {
-    
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
-    
-    
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;    
     const res = await fetch(url);
     const data = await res.json();
 
@@ -45,9 +39,8 @@ async function getComponent(id, file) {
     const cityTime = new Date(utcTime + timezoneOffset);
     const weeks = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    
+
     const weathertime = `${weeks[cityTime.getUTCDay()]} ${cityTime.getUTCDate()}, ${months[cityTime.getUTCMonth()]} ${cityTime.getUTCFullYear()}`;
-    
     document.getElementById('dateweather').innerHTML = weathertime;
 
     // Data
@@ -96,7 +89,7 @@ async function loadforecast(city,API_KEY ) {
     document.getElementById('Forecast').innerHTML = ""
 
     for (let i = 0; i < 9 ; i++) {
-    
+
     //icon
     const weathericon = data?.list[i]?.weather[0]?.icon
     const iconurl = `http://openweathermap.org/img/wn/${weathericon}@2x.png`
@@ -107,7 +100,7 @@ async function loadforecast(city,API_KEY ) {
     const Foretemp = data?.list[i]?.main?.temp;
     const Forehumidity = data?.list[i]?.main?.humidity;
     const ForeFahernheit = `${Math.floor(Foretemp * 1.8 +32)}.${Math.ceil(Foretemp * 1.8 +32)}`;
-   
+
     document.getElementById('Forecast').innerHTML +=
     `<div class="border bg-gray-300 border-violet-500 rounded-2xl flex flex-col p-5 "> 
      <p class="font-bold text-sm">${Foretime} ${city}</p>
@@ -125,7 +118,7 @@ async function loadforecast(city,API_KEY ) {
      //icon
     const weathericon = data?.list[i]?.weather[0]?.icon
     const iconurl = `http://openweathermap.org/img/wn/${weathericon}@2x.png`
-    
+
     //Forecast Data
     const Foretime = data?.list[i]?.dt_txt;
     const ForetDesc = data?.list[i]?.weather[0]?.main;
