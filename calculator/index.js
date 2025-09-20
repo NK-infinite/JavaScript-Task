@@ -71,3 +71,24 @@ document.getElementById('=').addEventListener('click', () => {
         operator = null;
     }
 });
+
+
+['+','-','*','/','%'].forEach(op => {
+    document.getElementById(op).addEventListener('click', () => {
+        if (current !== "" || (num1 !== null && operator)) {
+            if (current !== "") {
+                num1 = parseFloat(current);
+            }
+            operator = op;
+
+            // agar last char already operator hai to usko replace karo
+            if (/[+\-*/%]$/.test(Input.value)) {
+                Input.value = Input.value.slice(0, -1) + op;
+            } else {
+                Input.value += op;
+            }
+
+            current = "";
+        }
+    });
+});

@@ -19,6 +19,7 @@ const buttons = ['0','1','2','3','4','5','6','7','8','9','.'];
 buttons.forEach(id => {
     document.getElementById(id).addEventListener('click', () => {
         Amount.value += id;
+        getcureencyApi();
     });
 });
 
@@ -38,9 +39,7 @@ const getcureencyApi = () => {
             .catch(error => console.error('Error fetching data:', error))    
      }
 
-     document.getElementById('result').addEventListener('click', () => {    
-        getcureencyApi();
-     });
+    
 
 // remove all
 document.getElementById('AC').addEventListener('click', () => {
@@ -50,5 +49,5 @@ document.getElementById('AC').addEventListener('click', () => {
 // removw one by one 
 document.getElementById('C').addEventListener('click', () => {
     Amount.value = Amount.value.slice(0, -1);
-    console.log(Amount);
+    getcureencyApi();
 }); 
