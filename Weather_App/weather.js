@@ -151,7 +151,7 @@ async function loadforecast(city,API_KEY ) {
     const Forehumidity = data?.list[i]?.main?.humidity;
     const ForeFahernheit = `${Math.floor(Foretemp * 1.8 +32)}.${Math.ceil(Foretemp * 1.8 +32)}`;
     document.getElementById('Forecast').innerHTML +=
-    `<div class="border bg-gray-300 border-violet-500 rounded-2xl flex flex-col p-5 "> 
+    `<div class="border bg-gray-300 border-violet-500  rounded-2xl flex flex-col p-5"> 
      <p class="font-bold text-sm">${Foretime} ${city}</p>
      <div class="flex justify-between"> <p class="font-semibold text-gray-600">${ForetDesc}</p> <img class="w-10" src="${iconurl}" alt=""> </div>
      <div class="flex"><img class="p-2" src="./assets/icon/Vector (2).png" alt="">${Foretemp}°C  &  ${ForeFahernheit}°F</div>
