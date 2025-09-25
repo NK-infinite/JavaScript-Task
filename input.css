@@ -8,7 +8,7 @@
       @apply flex flex-col lg:pl-0 lg:mb-0 mb-0 px-5
     }
     .bbcnewbox{
-     @apply flex-col space-y-3 mb-20
+     @apply flex-col space-y-3 mb-10
     }
     .bbcnewheding{
      @apply font-semibold  text-wrap 

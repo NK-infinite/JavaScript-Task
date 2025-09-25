@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
     <link rel="stylesheet" href="../output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="lg:px-0 px-3">
 
-  <div class="bg-gray-400">
+  <div class="bg-neutral-400">
   <div class="container mx-auto">
     <p class="flex flex-row justify-baseline  items-center py-1 px-4 md:px-40  text-black text-sm">
       Monday, June 24, 2024, 13:57 Time zone in Brasilia - Federal District (GMT-3)
@@ -39,7 +41,7 @@
       id="cityInput"
       type="text"
       placeholder="New York"
-      class="flex-1 bg-transparent focus:outline-none text-gray-700 placeholder-gray-400">
+      class="flex-1 bg-transparent focus:outline-none text-gray-700 placeholder-gray-800">
   </div>
 </div>
         </div>
@@ -56,25 +58,25 @@
         </div>
 
         <div class="flex flex-col items-start gap-2 text-lg mr-20">
-          <img id="weathericon" class=" -mb-7" src="" alt="">
+          <img id="weathericon" class="items-center -mb-7" src="" alt="">
          <div class="flex"><p id="desc" class="mb-3"></p></div>
-         <div class="flex"><img src="./assets/icon/arrow-up.png"  alt=""><p id="temp_max" class="ml-5" ></p></div> 
-         <div class="flex"><img class="rotate-180" src="./assets/icon/arrow-up.png" alt=""><p id="temp_min" class="ml-5"></p></div> 
-         <div class="flex"><img src="./assets/icon/Vector (1).png" alt=""><p id="wind" class="ml-5"></p></div> 
-         <div class="flex" ><img src="./assets/icon/droplet.png" alt=""><p id="humidity" class="ml-5"></p></div> 
+         <div class="flex items-center"><img src="./assets/icon/arrow-up.png"  alt=""><p id="temp_max" class="ml-5" ></p></div> 
+         <div class="flex items-center"><img class="rotate-180" src="./assets/icon/arrow-up.png" alt=""><p id="temp_min" class="ml-5"></p></div> 
+         <div class="flex items-center"><img src="./assets/icon/Vector (1).png" alt=""><p id="wind" class="ml-5"></p></div> 
+         <div class="flex items-center" ><img src="./assets/icon/droplet.png" alt=""><p id="humidity" class="ml-5"></p></div> 
         </div>
       </div>
     </div>
 
-    <div class="flex flex-row  gap-6 my-6 lg:mx-40 justify-between">
+    <div class="flex flex-row  gap-6 my-6 lg:mx-35 justify-between">
       <div>
-        <button id="Today"  class="px-5 py-2 rounded-xl text-2xl focus:font-bold">Today</button>
-        <button id="Week" class="px-5 py-2 rounded-xl text-2xl focus:font-bold">Week</button>
+        <button id="Today"  class="px-5 py-2 rounded-xl text-2xl focus:font-bold font-semibold  focus:text-black  text-gray-500">Today</button>
+        <button id="Week" class="px-5 py-2 rounded-xl text-2xl   focus:font-bold font-semibold  focus:text-black  text-gray-500">Week</button>
       </div>
 
-      <div>
-        <button id="Celsius" class="px-3 py-2 focus:bg-violet-500 rounded-4xl text-2xl focus:text-white mr-5">°C</button>
-        <button id="Fahrenheit" class="px-3 py-2 focus:bg-violet-500 rounded-4xl text-2xl focus:text-white">°F</button>
+      <div class="mr-5">
+        <button id="Celsius" class="px-3 py-2 focus:bg-violet-500 bg-gray-300 rounded-4xl text-2xl focus:text-white mr-5">°C</button>
+        <button id="Fahrenheit" class="px-4 py-2 focus:bg-violet-500 bg-gray-300 rounded-4xl text-2xl focus:text-white">°F</button>
       </div>
     </div>
 
@@ -84,7 +86,7 @@
     </div>
 
     <!-- Highlight Section -->
-    <div class="justify-start  lg:w-150   lg:mx-35 my-10 lg:px-6">
+    <div class="justify-start  lg:w-150 lg:mx-35 my-10 lg:px-6">
       <h2 class="text-2xl font-semibold my-14">Today's Highlight</h2>
       <div class="flex flex-col  lg:flex-row  gap-5">
         
@@ -115,7 +117,7 @@
             <!-- ALL News -->
              <div class="ml-10 mr-10">
 
-               <div class="py-5 px-20 mx-30  my-15 flex flex-row justify-center font-semibold text-2xl  shadow-sm bg-stone-200 "><button>
+               <div class="py-5 px-20 mx-30  my-15 flex flex-row justify-center font-poppins text-2xl  shadow-sm bg-stone-200 "><button>
                  All news </button></div>
                 </div>
             

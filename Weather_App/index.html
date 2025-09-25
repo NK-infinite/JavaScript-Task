@@ -17,7 +17,7 @@
 <body>
   <div>
     <div>
-      <p class=" flex flex-row lg:justify-between items-center py-1  md:justify-between sm:justify-between md:px-40  bg-gray-400  text-white text-sm">
+      <p class=" flex flex-row lg:justify-between items-center py-1  md:justify-between sm:justify-between md:px-40  bg-neutral-400  text-white text-sm">
         Monday, June 24, 2024, 13:57 Time zone in Brasilia - Federal District (GMT-3)</p>
       </div>
       <div id="navbar"></div>
@@ -59,16 +59,16 @@
           <p class="px-4 mt-5 mb-1 text-violet-600 font-semibold">Charleston</p>
           <img class="px-4 mt-5 mb-1 " src="./assets/images/plus-circle.png" alt="">
         </div>
-        <div class="flex flex-row justify-center ">
+        <div class="flex flex-row justify-center">
           <img class="p-4 w-100" src="./assets/images/mockupWeatherExample.png" alt="">
         </div>
         <div class="flex flex-row  justify-between mx-5 ">
           <div class="flex gap-2 flex-col justify-items-start [&>*]:p-0.5">
           <p class="text-sm font-bold">TODAY</p>
           <div id="dateindex"></div>
-          <div class="flex"><img class="mr-2" src="./assets/icon/Vector.png" alt=""> <div id="weatherDescript"></div></div>
-          <div class="flex"><img class="mr-2" src="./assets/icon/Vector (3).png" alt="">  <div id="wind"></div> </div>
-         <div class="flex"><img class="mr-2" src="./assets/icon/cloud-rain.png" alt="">   <div  id="humidity"></div></div> 
+          <div class="flex items-center"><img class="mr-2 " src="./assets/icon/Vector.png" alt=""> <div id="weatherDescript"></div></div>
+          <div class="flex items-center"><img class="mr-2 " src="./assets/icon/Vector (3).png" alt="">  <div id="wind"></div> </div>
+         <div class="flex items-center"><img class="mr-2 " src="./assets/icon/cloud-rain.png" alt="">   <div  id="humidity"></div></div> 
   </div>
 
   <div class="flex-col justify-items-end">
@@ -78,7 +78,7 @@
 
 </div>
         <!-- box Forecast -->
-        <div id="indexforecast" class="pt-5 grid lg:grid-cols-5   grid-cols-3  lg:flex  flex-row justify-around  justify-items-center  p-3"></div>
+        <div id="indexforecast" class="pt-5 grid lg:grid-cols-5  grid-cols-3 lg:flex flex-row justify-around justify-items-center  p-3"></div>
       </div>
     </div>
     </div>
@@ -92,7 +92,7 @@
         <p class="text-4xl">Don´t guess the Weather.</p>
         <p class="mt-5 lg:w-120 text-right">Clime for year-round wheather forecasts for your location and across the
           world</p>
-        <a href="./weather.html" class=" mt-5 bg-violet-700 p-2 px-20 mb-20 rounded-4xl font-semibold text-white"> Get Started</a>
+        <a href="./weather.html" class=" mt-5 bg-violet-700 p-2 px-20 mb-20 rounded-4xl font-semibold text-white"> Get started</a>
       </div>
     </div>
 </div>
@@ -103,10 +103,11 @@
     </div>
 
     <div class="container  mx-auto">
+
     <!-- NEWS HADEING -->
-    <div class="flex flex-row justify-between items-center mt-20 font-bold lg:px-50 px-6 mr-10 mb-10">
+    <div class="flex flex-row justify-between items-center  mt-20 font-bold lg:px-50 px-6  mb-10">
       <p class="text-2xl justify-center lg:text-5xl whitespace-nowrap">LASTEST NEWS</p>
-      <div class="lg:block sm:hidden md:hidden border-4 border-violet-800  lg:w-full h-0 ml-10"></div>
+      <div class="lg:block sm:hidden md:hidden border-4 border-violet-800  lg:w-full mr-5 h-0 ml-10"></div>
     </div>
 
     <!-- NEWS -->
@@ -128,41 +129,45 @@
             <!-- second box -->
             <div class="flex flex-col justify-around items-start mx-10 lg:mr-50 -mt-11">
               
-              <div class="flex mb-10 flex-row-reverse items-center">
-              <div>
-              <img class="w-60 " src="./assets/images/unsplash_JHyiw_dpALk (2).png" alt="">
-              </div>
+              <div class="flex mb-10 flex-row items-start">
+              
 
-          <div class="flex flex-col text-sm">
-            <a class="text-violet-600 text-sm mt-5 mb-1"> Heavy rain in New Orleans</a>
+          <div class="flex flex-col text-sm mt-9">
+            <a class="text-violet-600 text-sm mb-1"> Heavy rain in New Orleans</a>
             <p style="font-family: 'Times New Roman', Times, serif;" class="lg:w-90">Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat elementum.
               Faucibus faucibus tempor habitasse amet auctor. Sit lorem a cursus a. Donec vitae
               massa et lectus dolor in.</p>
             </div>
+            <div>
+              <img class="w-60 " src="./assets/images/unsplash_JHyiw_dpALk (2).png" alt="">
+              </div>
           </div>
           
-          <div class="flex mb-10 flex-row-reverse items-center">
-            <div>
-              <img class="w-60 " src="./assets/images/unsplash_JHyiw_dpALk.png" alt="">
-            </div>
+          <div class="flex mb-10 flex-row items-start">
+            
             <div class="flex flex-col text-sm">
-              <a class="text-violet-600 mt-5 mb-1 "> Heavy rain in New Orleans</a>
+              <a class="text-violet-600  mb-1 "> Heavy rain in New Orleans</a>
               <p style="font-family: 'Times New Roman', Times, serif;" class="lg:w-90" >Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat elementum.
                 Faucibus faucibus tempor habitasse amet auctor. Sit lorem a cursus a. Donec vitae
                 massa et lectus dolor in.</p>
               </div>
+              <div>
+              <img class="w-60 " src="./assets/images/unsplash_JHyiw_dpALk.png" alt="">
+            </div>
             </div>
             
-            <div class="flex mb-10 flex-row-reverse items-center ">
-              <div>
-                <img class="w-60 " src="./assets/images/unsplash_JHyiw_dpALk (1).png " alt="">
-              </div>
+            <div class="flex mb-10 flex-row items-start ">
+              
               <div class="flex flex-col text-sm">
-                <a class="text-violet-600 mt-5 mb-1"> Heavy rain in New Orleans</a>
+                <a class="text-violet-600  mb-1"> Heavy rain in New Orleans</a>
                 <p style="font-family: 'Times New Roman', Times, serif;" class="lg:w-90">Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat elementum.
                   Faucibus faucibus tempor habitasse amet auctor. Sit lorem a cursus a. Donec vitae
                   massa et lectus dolor in.</p>
                 </div>
+
+                <div>
+                <img class="w-60 " src="./assets/images/unsplash_JHyiw_dpALk (1).png " alt="">
+              </div>
               </div>
         </div>
       </div>

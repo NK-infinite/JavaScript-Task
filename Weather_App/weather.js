@@ -105,7 +105,7 @@ async function loadforecast(city,API_KEY ) {
     `<div class="border-4  border-gray-500 rounded-2xl flex flex-col p-3 "> 
      <p class="font-bold text-sm">${Foretime} </p>
      <div class="flex justify-between"> <p class="font-semibold text-gray-600">${ForetDesc}</p> <img class="w-10" src="${iconurl}" alt=""> </div>
-     <div class="flex flex-col justify-center">
+     <div class="flex flex-col justify-center -mt-4">
      <div class="flex items-center"><img class="p-2" src="./assets/icon/Vector (2).png" alt=""><p class="p-2 ">${Math.floor(Foretemp )}°C </p></div>
      <div class="flex items-center"><img class=""  src="./assets/icon/droplet (1).png" alt=""><p class="pl-3">${Forehumidity}%</p></div>
      </div>
@@ -131,7 +131,7 @@ async function loadforecast(city,API_KEY ) {
     `<div class="border-4  border-gray-500 rounded-2xl flex flex-col p-3 "> 
      <p class="font-bold text-sm">${Foretime}</p>
      <div class="flex justify-between"> <p class="font-semibold text-gray-600">${ForetDesc}</p> <img class="w-10" src="${iconurl}" alt=""> </div>
-     <div class="flex flex-col justify-center">
+     <div class="flex flex-col justify-center -mt-4">
      <div class="flex items-center"><img class="p-2" src="./assets/icon/Vector (2).png" alt=""><p class="p-2 ">${Math.floor(Foretemp )}°C </p></div>
      <div class="flex items-center"><img class=""  src="./assets/icon/droplet (1).png" alt=""><p class="pl-2">${Forehumidity}%</p></div>
      </div>
@@ -157,7 +157,7 @@ async function loadforecast(city,API_KEY ) {
     `<div class="border-4  border-gray-500    rounded-2xl flex flex-col p-3 "> 
      <p class="font-bold text-sm">${Foretime} </p>
      <div class="flex justify-between"> <p class="font-semibold text-gray-600">${ForetDesc}</p> <img class="w-10" src="${iconurl}" alt=""> </div>
-     <div class="flex flex-col justify-center">
+     <div class="flex flex-col justify-center -mt-4">
      <div class="flex items-center"><img class="p-2" src="./assets/icon/Vector (2).png" alt=""><p class="p-2 ">${Math.floor(Foretemp )}°C </p></div>
      <div class="flex items-center"><img class=""  src="./assets/icon/droplet (1).png" alt=""><p class="pl-2">${Forehumidity}%</p></div>
      </div>
