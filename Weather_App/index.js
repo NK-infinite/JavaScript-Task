@@ -5,7 +5,7 @@ async function getComponent(id, file) {
   document.getElementById(id).innerHTML = html;
 }
 
-getComponent("navbar", "./htmlcomponet/navbar.html");
+//getComponent("navbar", "./htmlcomponet/navbar.html");
 getComponent("barkingnewscomponet", "./htmlcomponet/breakingnews.html");
 getComponent("footer", "./htmlcomponet/footer.html");
 getComponent("rightnewscomponet" , "./htmlcomponet/bbcnews.html")
@@ -48,6 +48,42 @@ fetch('./htmlcomponet/bbcnews.html')
 .catch(error => console.error('Error loading rightnews:', error));
 
 
+//index.js
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("./htmlcomponet/navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      // Navbar inject karo
+      const navbarDiv = document.getElementById("navbar");
+      navbarDiv.innerHTML = data;
+
+      // Navbar ke links select karo
+      const links = navbarDiv.querySelectorAll(".nav-link");
+      const currentPage = window.location.pathname.split("/").pop().toLowerCase();
+
+      // Active link highlight
+      links.forEach(link => {
+        if (link.getAttribute("href").toLowerCase() === currentPage) {
+          link.classList.add("text-purple-600", "font-medium");
+          link.classList.remove("text-gray-800");
+        } else {
+          link.classList.add("text-gray-800", "hover:text-purple-600");
+          link.classList.remove("text-purple-600", "font-medium");
+        }
+      });
+
+      // Logo image change logic
+      const logoImg = navbarDiv.querySelector("img");
+      if (currentPage === "index.html") {
+        logoImg.src = "./assets/images/weatherTrip-logo 2.png";
+      } else if (currentPage === "news.html") {
+        logoImg.src = "./assets/images/weatherTrip-logo 3.png";
+      } else if (currentPage === "weather.html") {
+        logoImg.src = "./assets/images/weatherTrip-logo 3.png";
+      }
+    });
+});
+
 // //weathertripnews
 // fetch('./htmlcomponet/WeatherTripnew.html')
 // .then(response => response.text())
@@ -56,8 +92,6 @@ fetch('./htmlcomponet/bbcnews.html')
 // })
 // .catch(error => console.error('Error loading weathertripnews:', error));
 
-
-
 //time and date
     const date = new Date();
     const options = { month: 'short', day: 'numeric', weekday: 'long' };
@@ -65,7 +99,7 @@ fetch('./htmlcomponet/bbcnews.html')
     //index.html date and time
     document.getElementById('timeindex').innerText = date.toLocaleTimeString('en-US', timeOptions);
     document.getElementById('dateindex').innerText = date.toLocaleDateString('en-US', options); 
-
+    const chakeingtime = date.toLocaleTimeString('en-US', timeOptions);
   //Weather api
  const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=Surat&appid=${API_KEY}&units=metric`;
  const API_URL2 = `https://api.openweathermap.org/data/2.5/forecast?q=Surat&appid=${API_KEY}&units=metric`;
@@ -84,7 +118,7 @@ async function loadWeather() {
     const windSpeed = (data?.wind?.speed );
     const humidity = data?.main?.humidity;
      
- for (let i = 0; i < 4; i++) {
+ for (let i = 0; i < 5; i++) {
   //icon
   const weathericon = data2?.list[i]?.weather[0]?.icon
   const iconurl = `http://openweathermap.org/img/wn/${weathericon}@2x.png`
@@ -95,16 +129,16 @@ async function loadWeather() {
   const forecasttemp = `${Math.round( data2?.list[i]?.main?.temp)}`;
   
   document.getElementById('indexforecast').innerHTML += `    
-  <div class= " bg-violet-500 flex-col p-3 rounded-2xl">
-  <p>${forecasttime == 0 ? `Now` : forecasttime}</p>
-  <img class="h-10" src="${iconurl}" alt="">
-  <p >${forecasttemp}°</p>
+  <div class= " bg-violet-500 flex flex-col  justify-center items-center p-3 rounded-2xl">
+  <p class=" text-white " >${forecasttime == 1 ? `Now` : forecasttime}</p>
+  <img class="h-10 text-white" src="${iconurl}" alt="">
+  <p class=" text-white" >${forecasttemp}°</p>
   </div>`
   }
 
     // Update the HTML elements
     document.getElementById("weatherDescript").innerText = weatherDescription;
-    document.getElementById("tempindex").innerText = `${temperature}°C`;
+    document.getElementById("tempindex").innerText = `${temperature}°`;
     document.getElementById("wind").innerText = ` ${windSpeed} km/h`;
     document.getElementById("humidity").innerText = ` ${humidity}%`;
 
@@ -115,3 +149,6 @@ async function loadWeather() {
 
 
 loadWeather();
+
+
+

@@ -10,7 +10,7 @@ async function getComponent(id, file) {
   getComponent("barkingnewscomponet", "./htmlcomponet/breakingnews.html");
   getComponent("footer", "./htmlcomponet/footer.html");
     
-  const city = "Surat"
+  const city = "London"
   
   // Call Weather&Forecast 
   loadWeather(city , API_KEY)
@@ -60,16 +60,16 @@ async function getComponent(id, file) {
     document.getElementById("cityname").innerText = cityname;
     document.getElementById("tempindex").innerText = `${Math.round(temp)}°`;
     document.getElementById("desc").innerText = description;
-    document.getElementById("wind").innerText = `${wind} km/h`;
+    document.getElementById("wind").innerText = `${Math.round(wind)} km/h`;
     document.getElementById("humidity").innerText = `${humidity}%`;
     document.getElementById("weathericon").src = `${iconurl}`
-    document.getElementById('temp_max').innerHTML = `${temp_max}°`
-    document.getElementById('temp_min').innerHTML = `${temp_min}°`
+    document.getElementById('temp_max').innerHTML = `${Math.round(temp_max)}°`
+    document.getElementById('temp_min').innerHTML = `${Math.round(temp_min)}°`
     // Highlight section
     document.getElementById("highlightDate").innerText = new Date().toDateString();
     document.getElementById("lowHighlight").innerText = `${Math.round(temp_min)}°`;
     document.getElementById("highHighlight").innerText = `${Math.round(temp_max)}°`;
-    document.getElementById("variation").innerText = `${variation}°`
+    document.getElementById("variation").innerText = `${Math.round(variation)}°`
  
   } catch (error) {
     console.error("Error loading weather:", error);
@@ -99,14 +99,16 @@ async function loadforecast(city,API_KEY ) {
     const ForetDesc = data?.list[i]?.weather[0]?.main;
     const Foretemp = data?.list[i]?.main?.temp;
     const Forehumidity = data?.list[i]?.main?.humidity;
-    const ForeFahernheit = `${Math.floor(Foretemp * 1.8 +32)}.${Math.ceil(Foretemp * 1.8 +32)}`;
+    const ForeFahernheit = `${Math.floor(Foretemp * 1.8 +32)}`;
 
     document.getElementById('Forecast').innerHTML +=
-    `<div class="border bg-gray-300 border-violet-500 rounded-2xl flex flex-col p-5 "> 
-     <p class="font-bold text-sm">${Foretime} ${city}</p>
+    `<div class="border-4  border-gray-500 rounded-2xl flex flex-col p-3 "> 
+     <p class="font-bold text-sm">${Foretime} </p>
      <div class="flex justify-between"> <p class="font-semibold text-gray-600">${ForetDesc}</p> <img class="w-10" src="${iconurl}" alt=""> </div>
-     <div class="flex"><img class="p-2" src="./assets/icon/Vector (2).png" alt="">${Foretemp}°C & ${ForeFahernheit}°F</div>
-     <div class="flex"><img src="./assets/icon/droplet (1).png" alt="">${Forehumidity}%</div>
+     <div class="flex flex-col justify-center">
+     <div class="flex items-center"><img class="p-2" src="./assets/icon/Vector (2).png" alt=""><p class="p-2 ">${Math.floor(Foretemp )}°C </p></div>
+     <div class="flex items-center"><img class=""  src="./assets/icon/droplet (1).png" alt=""><p class="pl-2">${Forehumidity}%</p></div>
+     </div>
      </div>`
     }
     
@@ -124,13 +126,15 @@ async function loadforecast(city,API_KEY ) {
     const ForetDesc = data?.list[i]?.weather[0]?.main;
     const Foretemp = data?.list[i]?.main?.temp;
     const Forehumidity = data?.list[i]?.main?.humidity;
-    const ForeFahernheit = `${Math.floor(Foretemp * 1.8 +32)}.${Math.ceil(Foretemp * 1.8 +32)}`;
+    const ForeFahernheit = `${Math.floor(Foretemp * 1.8 +32)}`;
     document.getElementById('Forecast').innerHTML +=
-    `<div class="border bg-gray-300 border-violet-500 rounded-2xl flex flex-col p-5 "> 
-     <p class="font-bold text-sm">${Foretime} ${city}</p>
+    `<div class="border-4  border-gray-500 rounded-2xl flex flex-col p-3 "> 
+     <p class="font-bold text-sm">${Foretime} </p>
      <div class="flex justify-between"> <p class="font-semibold text-gray-600">${ForetDesc}</p> <img class="w-10" src="${iconurl}" alt=""> </div>
-     <div class="flex"><img class="p-2" src="./assets/icon/Vector (2).png" alt="">${Foretemp}°C & ${ForeFahernheit}°F</div>
-     <div class="flex"><img src="./assets/icon/droplet (1).png" alt="">${Forehumidity}%</div>
+     <div class="flex flex-col justify-center">
+     <div class="flex items-center"><img class="p-2" src="./assets/icon/Vector (2).png" alt=""><p class="p-2 ">${Math.floor(Foretemp )}°C </p></div>
+     <div class="flex items-center"><img class=""  src="./assets/icon/droplet (1).png" alt=""><p class="pl-2">${Forehumidity}%</p></div>
+     </div>
      </div>` 
     }
     })
@@ -149,13 +153,14 @@ async function loadforecast(city,API_KEY ) {
     const ForetDesc = data?.list[i]?.weather[0]?.main;
     const Foretemp = data?.list[i]?.main?.temp;
     const Forehumidity = data?.list[i]?.main?.humidity;
-    const ForeFahernheit = `${Math.floor(Foretemp * 1.8 +32)}.${Math.ceil(Foretemp * 1.8 +32)}`;
     document.getElementById('Forecast').innerHTML +=
-    `<div class="border bg-gray-300 border-violet-500  rounded-2xl flex flex-col p-5"> 
-     <p class="font-bold text-sm">${Foretime} ${city}</p>
+    `<div class="border-4  border-gray-500    rounded-2xl flex flex-col p-3 "> 
+     <p class="font-bold text-sm">${Foretime} </p>
      <div class="flex justify-between"> <p class="font-semibold text-gray-600">${ForetDesc}</p> <img class="w-10" src="${iconurl}" alt=""> </div>
-     <div class="flex"><img class="p-2" src="./assets/icon/Vector (2).png" alt="">${Foretemp}°C  &  ${ForeFahernheit}°F</div>
-     <div class="flex"><img src="./assets/icon/droplet (1).png" alt="">${Forehumidity}%</div>
+     <div class="flex flex-col justify-center">
+     <div class="flex items-center"><img class="p-2" src="./assets/icon/Vector (2).png" alt=""><p class="p-2 ">${Math.floor(Foretemp )}°C </p></div>
+     <div class="flex items-center"><img class=""  src="./assets/icon/droplet (1).png" alt=""><p class="pl-2">${Forehumidity}%</p></div>
+     </div>
      </div>`
     }
      })
@@ -163,3 +168,40 @@ async function loadforecast(city,API_KEY ) {
     console.error("Error loading weather:", error);
   }
 }
+
+
+//index.js
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("./htmlcomponet/navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      // Navbar inject karo
+      const navbarDiv = document.getElementById("navbar");
+      navbarDiv.innerHTML = data;
+
+      // Navbar ke links select karo
+      const links = navbarDiv.querySelectorAll(".nav-link");
+      const currentPage = window.location.pathname.split("/").pop().toLowerCase();
+
+      // Active link highlight
+      links.forEach(link => {
+        if (link.getAttribute("href").toLowerCase() === currentPage) {
+          link.classList.add("text-purple-600", "font-medium");
+          link.classList.remove("text-gray-800");
+        } else {
+          link.classList.add("text-gray-800", "hover:text-purple-600");
+          link.classList.remove("text-purple-600", "font-medium");
+        }
+      });
+
+      // Logo image change logic
+      const logoImg = navbarDiv.querySelector("img");
+      if (currentPage === "index.html") {
+        logoImg.src = "./assets/images/weatherTrip-logo 2.png";
+      } else if (currentPage === "news.html") {
+        logoImg.src = "./assets/images/weatherTrip-logo 3.png";
+      } else if (currentPage === "weather.html") {
+        logoImg.src = "./assets/images/weatherTrip-logo 3.png";
+      }
+    });
+});

@@ -1,0 +1,6 @@
+{
+  "command": "start",
+  "serverUrl": "https://nk-infinite.github.io/JavaScript-Task/Weather_App/index.html",
+  "authenticateProxy": true,
+  "commitMode": "commits"
+}

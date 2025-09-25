@@ -7,18 +7,25 @@
   <title>Weather App</title>
   <link rel="stylesheet" href="../output.css">
 </head>
+
+
+  <style>
+      :root { --brand:#6937F5; }
+      .font-sans-custom { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif; }
+      .font-serif-custom { font-family: "Times New Roman", Times, serif; }
+    </style>
+
 <body>
-  
   <div>
-    <div class="bg-gary-600">
-      <p class="flex flex-row lg:justify-between items-center py-1  md:justify-between sm:justify-between md:px-40  bg-gray-400  text-white text-sm">
+    <div>
+      <p class=" flex flex-row lg:justify-between items-center py-1  md:justify-between sm:justify-between md:px-40  bg-gray-400  text-white text-sm">
         Monday, June 24, 2024, 13:57 Time zone in Brasilia - Federal District (GMT-3)</p>
       </div>
-      <div class="container  mx-auto">
+      
       <div id="navbar"></div>
-      </div>
+      
     <!-- Banner -->
-    <div class="sm:h-120 flex  lg:flex lg:flex-row md:flex-col sm:flex-col  lg:justify-start bg-cover bg-center"
+    <div class="sm:h-120 flex   lg:flex lg:flex-row md:flex-col sm:flex-col  lg:justify-start bg-cover bg-center"
       style="background-image: url('./assets/images/banner.png');">
    
       <!-- text -->
@@ -35,101 +42,89 @@
       </div>
     </div>
      
-
-    <div class="lg:flex lg:flex-col  ">
-      
+    <div class="lg:flex lg:flex-col">
       <div class="container  mx-auto">
-    <div >
+    <div>
       
       <!-- wheather new -->
 
          <div
-         class="lg:flex  flex-col lg:flex-row lg:justify-around items-center lg:items-start px-5 sm:px-10 md:px-20 lg:px-40">
-         <div class="flex-col justify-between  pt-20 lg:pl-30 sm:pl-30 ">
-           <div class="font-semibold mb-10  ">Stay prepared for upcomming weather with <br> <b>daily wheather news.</b>
+         class="lg:flex  flex-col lg:flex-row lg:justify-around items-center lg:items-start px-5 sm:px-10 md:px-30 lg:px-40">
+         <div class="flex-col justify-between  pt-20 lg:pl-0 sm:pl-30 ">
+           <div class=" mb-10  text-3xl">Stay prepared for upcomming weather with <br> <b>daily wheather news.</b>
            </div>
-           <a href="./news.html" class="border-2 rounded-4xl p-2 px-10 text-violet-500 font-bold mb-10">Explore</a>
+           <a href="./news.html" class="border-2 rounded-4xl p-2 px-20 text-violet-700 font-bold mb-10">Explore</a>
           </div>
        
 
       <!-- box -->
- 
-
-      
-      <div class="flex-col  bg-white  rounded-2xl shadow-lg lg:relative sm:mb-30  lg:-mt-55 ">
-        <div class="flex flex-row   justify-center  sm:justify-around">
-          <img class="p-4" src="./assets/images/menu.png" alt="">
-          <p class="p-4 text-violet-600 font-semibold">Charleston</p>
-          <img class="p-4" src="./assets/images/plus-circle.png" alt="">
+      <div class="flex-col  bg-white  rounded-2xl shadow-lg  lg:relative sm:mb-30  lg:-mt-55 ">
+        <div class="flex flex-row  gap-6    justify-center  sm:justify-around">
+          <img class="px-4 mt-5 mb-1" src="./assets/images/menu.png" alt="">
+          <p class="px-4 mt-5 mb-1 text-violet-600 font-semibold">Charleston</p>
+          <img class="px-4 mt-5 mb-1 " src="./assets/images/plus-circle.png" alt="">
         </div>
         <div class="flex flex-row justify-center ">
-          <img class="p-4" src="./assets/images/mockupWeatherExample.png" alt="">
+          <img class="p-4 w-100" src="./assets/images/mockupWeatherExample.png" alt="">
         </div>
-        <div class="flex flex-row justify-around">
-          <div class="flex flex-col justify-items-start [&>*]:p-0.5">
-          <p class="text-sm font-semibold">TODAY</p>
+        <div class="flex flex-row  justify-between mx-5 ">
+          <div class="flex gap-2 flex-col justify-items-start [&>*]:p-0.5">
+          <p class="text-sm font-bold">TODAY</p>
           <div id="dateindex"></div>
-          <div id="weatherDescript"></div>
-          <div id="wind"></div>
-    <div  id="humidity"></div>
-</div>
+          <div class="flex"><img class="mr-2" src="./assets/icon/Vector.png" alt=""> <div id="weatherDescript"></div></div>
+          <div class="flex"><img class="mr-2" src="./assets/icon/Vector (3).png" alt="">  <div id="wind"></div> </div>
+         <div class="flex"><img class="mr-2" src="./assets/icon/cloud-rain.png" alt="">   <div  id="humidity"></div></div> 
+  </div>
 
-<div class="flex-col justify-items-end">
+  <div class="flex-col justify-items-end">
     <div id="timeindex" class="text-6xl"></div>
-    <div id="tempindex" class="text-4xl mt-5"></div>
-</div>
-</div>
+    <div id="tempindex" class="text-4xl mt-10 mb-2"></div>
+  </div>
 
+</div>
         <!-- box Forecast -->
-        <div id="indexforecast" class="pt-5 grid lg:grid-cols-5 lg:gap-0 gap-10 grid-cols-3  lg:flex  flex-row justify-around  justify-items-center  p-3"> </div>
-    
+        <div id="indexforecast" class="pt-5 grid lg:grid-cols-5   grid-cols-3  lg:flex  flex-row justify-around  justify-items-center  p-3"></div>
       </div>
     </div>
-
     </div>
-
 
 <div >
     <div class="lg:flex justify-around pr-15">
       <div class=" lg:pl-35 md:justify-items-center sm:pl-35">
       <img class="lg:-mt-60 " src="./assets/images/weatherTrip-banner 1.png" alt="" srcset="">
       </div>
-
-      <div class=" flex flex-col items-center lg:items-end  sm:justify-center lg:mt-2 mt-20  lg:pr-20">
+           <div class=" flex flex-col items-center  lg:items-end  sm:justify-center lg:mt-2 mt-20   lg:pr-40">
         <p class="text-4xl">Don´t guess the Weather.</p>
-        <p class="mt-5 lg:w-90  ">Clime for year-round wheather forecasts for your location and across the
+        <p class="mt-5 lg:w-120 text-right">Clime for year-round wheather forecasts for your location and across the
           world</p>
-        <a href="./weather.html" class=" mt-5 bg-violet-700 p-2 px-20 mb-20 rounded-4xl text-white"> Get Started</a>
+        <a href="./weather.html" class=" mt-5 bg-violet-700 p-2 px-20 mb-20 rounded-4xl font-semibold text-white"> Get Started</a>
       </div>
     </div>
 </div>
 
 
     </div>
-
-
     <div>
       <div id="weathertripnewscomponet"></div>
     </div>
    
     <div class="container  mx-auto">
     <!-- NEWS HADEING -->
-    <div class="flex flex-row justify-between items-center mt-20 lg:px-50 px-6 mb-10">
+    <div class="flex flex-row justify-between items-center mt-20 font-bold lg:px-50 px-6 mr-10 mb-10">
       <p class="text-2xl justify-center lg:text-5xl whitespace-nowrap">LASTEST NEWS</p>
-      <div class="lg:block sm:hidden md:hidden border-2 border-violet-800  lg:w-full h-0 ml-10"></div>
+      <div class="lg:block sm:hidden md:hidden border-4 border-violet-800  lg:w-full h-0 ml-10"></div>
     </div>
 
     <!-- NEWS -->
      <div>
-
        <div class="lg:flex lg:flex-row lg:justify-around px-5">
          <!-- first div box (newsBox is my Tailwind componet)-->
-         <div class="sm:newsbox lg:pr-20 lg:pl-45 lg:items-start  md:items-center">
-           <div class="flex flex-row justify-start" >
+         <div class="sm:newsbox lg:pr-5 lg:pl-45 lg:items-start  md:items-center">
+           <div class="flex flex-row justify-start">
              <img class="lg:w-120" src="./assets/images/unsplash_GXEZuWo5m4I.png" alt="">
             </div>
             <div class="flex flex-col ">
-              <a class="text-violet-600  "> Heavy rain in New Orleans</a>
+              <a class="text-violet-600 mt-5 mb-1 "> Heavy rain in New Orleans</a>
               <p style="font-family: 'Times New Roman', Times, serif;" class="lg:w-120">Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat elementum.
                 Faucibus faucibus tempor habitasse amet auctor. Sit lorem a cursus a. Donec vitae
                 massa et lectus dolor in.</p>
@@ -137,39 +132,40 @@
             </div>
             
             <!-- second box -->
-            <div class="flex flex-col justify-around items-start lg:pr-40">
-              <div class="flex flex-row-reverse items-center">
-                <div>
-            <img class="w-80 mb-10" src="./assets/images/unsplash_JHyiw_dpALk (2).png" alt="">
-          </div>
+            <div class="flex flex-col justify-around items-start mx-10 lg:mr-50 -mt-11">
+              
+              <div class="flex mb-10 flex-row-reverse items-center">
+              <div>
+              <img class="w-60 " src="./assets/images/unsplash_JHyiw_dpALk (2).png" alt="">
+              </div>
+
           <div class="flex flex-col text-sm">
-            <a class="text-violet-600 text-sm"> Heavy rain in New Orleans</a>
-            <p style="font-family: 'Times New Roman', Times, serif;" class="lg:w-120">Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat elementum.
+            <a class="text-violet-600 text-sm mt-5 mb-1"> Heavy rain in New Orleans</a>
+            <p style="font-family: 'Times New Roman', Times, serif;" class="lg:w-90">Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat elementum.
               Faucibus faucibus tempor habitasse amet auctor. Sit lorem a cursus a. Donec vitae
               massa et lectus dolor in.</p>
             </div>
           </div>
           
-          <div class="flex flex-row-reverse items-center">
+          <div class="flex mb-10 flex-row-reverse items-center">
             <div>
-              <img class="w-80 mb-10" src="./assets/images/unsplash_JHyiw_dpALk.png" alt="">
+              <img class="w-60 " src="./assets/images/unsplash_JHyiw_dpALk.png" alt="">
             </div>
             <div class="flex flex-col text-sm">
-              <a class="text-violet-600"> Heavy rain in New Orleans</a>
-              <p style="font-family: 'Times New Roman', Times, serif;" class="lg:w-120" >Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat elementum.
+              <a class="text-violet-600 mt-5 mb-1 "> Heavy rain in New Orleans</a>
+              <p style="font-family: 'Times New Roman', Times, serif;" class="lg:w-90" >Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat elementum.
                 Faucibus faucibus tempor habitasse amet auctor. Sit lorem a cursus a. Donec vitae
                 massa et lectus dolor in.</p>
               </div>
             </div>
             
-            
-            <div class="flex flex-row-reverse items-center ">
+            <div class="flex mb-10 flex-row-reverse items-center ">
               <div>
-                <img class="w-80 mb-20" src="./assets/images/unsplash_JHyiw_dpALk (1).png " alt="">
+                <img class="w-60 " src="./assets/images/unsplash_JHyiw_dpALk (1).png " alt="">
               </div>
               <div class="flex flex-col text-sm">
-                <a class="text-violet-600"> Heavy rain in New Orleans</a>
-                <p style="font-family: 'Times New Roman', Times, serif;" class="lg:w-120">Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat elementum.
+                <a class="text-violet-600 mt-5 mb-1"> Heavy rain in New Orleans</a>
+                <p style="font-family: 'Times New Roman', Times, serif;" class="lg:w-90">Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat elementum.
                   Faucibus faucibus tempor habitasse amet auctor. Sit lorem a cursus a. Donec vitae
                   massa et lectus dolor in.</p>
                 </div>
@@ -178,44 +174,65 @@
       </div>
     </div>
 
+    <!-- NEWS Hading (ALL AROUND THE WORLD)-->
 
-    <!-- NEWS Hading -->
-    <div class="flex flex-row justify-between items-center mt-20 lg:px-50 px-5 mb-10">
+    <div class="flex flex-row justify-center items-center font-bold mt-20 lg:px-50 px-5 mb-10">
       <p class="text-2xl lg:text-5xl whitespace-nowrap">ALL AROUND THE WORLD</p>
-      <div class="lg:block sm:hidden md:hidden border-2 border-violet-800  lg:w-full h-0 ml-10"></div>
+      <div class="lg:block sm:hidden md:hidden border-4 border-violet-800 w-1 lg:w-full h-0 ml-10 mr-6"></div>
     </div>
 
-    <div class="lg:flex lg:flex-row lg:justify-around items-center lg:px-20 lg:mr-20 mb-10">
+   <section class="pb-20">
+      <div class="mx-45  px-4">
+        <div class="flex  gap-5">
 
-      <!-- first div box -->
+        <article class="flex flex-col gap-6">
+          <img src="./assets/images/unsplash_p9BRX1mBfe4.png" alt="Heavy rain with lightning in New Orleans" class="w-200 rounded-sm"/>
+          <div class="flex flex-col gap-2">
+            <h2 class="font-normal text-[color:var(--brand)] font-sans-custom">Heavy rai
+            n in New Orleans</h2>
+            <p class=" font-normal leading-normal text-[#0E0E0E] font-serif-custom">Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat elementum. Faucibus faucibus tempor habitasse amet auctor. Sit lorem a cursus a. Donec vitae massa et lectus dolor in.</p>
+          </div>
+        </article>
+       
+        <article class="flex flex-col gap-6 mr-6" >
+          <img src="./assets/images/unsplash_p9BRX1mBfe4 (1).png" alt="Tropical scenery in New Orleans" class="w-200  rounded-sm"/>
+          <div class="flex flex-col gap-2">
+            <h2 class=" font-normal text-[color:var(--brand)] font-sans-custom">Heavy rain in New Orleans</h2>
+            <p class=" font-normal leading-normal text-[#0E0E0E] font-serif-custom">Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat elementum. Faucibus faucibus tempor habitasse amet auctor. Sit lorem a cursus a. Donec vitae massa et lectus dolor in.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+<!--  
+    <div class="lg:flex lg:flex-row lg:justify-around items-center lg:px-0 lg:mr-0 mb-10">
+      first div box  
       <div class="newsbox md:items-center">
         <div>
-          <img class="w-130" src="./assets/images/unsplash_p9BRX1mBfe4.png" alt="">
+          <img class="w-200" src="./assets/images/unsplash_p9BRX1mBfe4.png" alt="">
         </div>
-
         <div class="flex flex-col ">
           <a class="text-violet-600 text-wrap "> Heavy rain in New Orleans</a>
-          <p style="font-family: 'Times New Roman', Times, serif;" class="lg:w-130">Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat elementum.
+          <p style="font-family: 'Times New Roman', Times, serif;" class="">Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat elementum.
             Faucibus faucibus tempor habitasse amet auctor. Sit lorem a cursus a. Donec vitae
             massa et lectus dolor in.</p>
         </div>
       </div>
-
-      <!-- first div box -->
-      <div class="newsbox md:items-center">
+      seconde div box    
+           <div class="newsbox md:items-center"  >
         <div>
-          <img class="w-130" src="./assets/images/unsplash_p9BRX1mBfe4 (1).png" alt="">
+          <img class="w-200" src="./assets/images/unsplash_p9BRX1mBfe4 (1).png" alt="">
         </div>
-
         <div class="flex flex-col ">
           <a class="text-violet-600 text-wrap"> Heavy rain in New Orleans</a>
-          <p style="font-family: 'Times New Roman', Times, serif;" class="lg:w-130">Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat elementum.
+          <p style="font-family: 'Times New Roman', Times, serif;" class="">Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat elementum.
             Faucibus faucibus tempor habitasse amet auctor. Sit lorem a cursus a. Donec vitae
             massa et lectus dolor in.</p>
-        </div>
-
+        </div> 
       </div>
     </div>
+     -->
   </div>
   <div id="footer"></div>
   </div>

@@ -2,16 +2,16 @@
 
 @layer{
     .navbarpage{
-      @apply  p-5 lg:text-2xl focus:text-violet-600  focus:font-semibold  sm:text-2xl 
+      @apply  p-5 lg:text-2xl  sm:text-2xl 
     }
     .newsbox{
-      @apply flex flex-col lg:pl-30 lg:mb-0 mb-20 px-5
+      @apply flex flex-col lg:pl-0 lg:mb-0 mb-0 px-5
     }
     .bbcnewbox{
      @apply flex-col space-y-3 mb-20
     }
     .bbcnewheding{
-     @apply font-bold  text-wrap 
+     @apply font-semibold  text-wrap 
     }
     .breakingnews{
       @apply flex flex-col items-center lg:items-start lg:pt-10 pt-20  

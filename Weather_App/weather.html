@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,100 +8,119 @@
 </head>
 
 <body class="lg:px-0 px-3">
-     
-  <div class="bg-gary-600">
-    <p class="flex flex-row lg:justify-between items-center py-1  md:justify-between sm:justify-between md:px-40  bg-gray-400  text-white text-sm">
-      Monday, June 24, 2024, 13:57 Time zone in Brasilia - Federal District (GMT-3)</p>
-    </div>
 
-      <div class="container  mx-auto">
-    <!-- NAVBAR -->
-
-      <div id="navbar" class="mb-10"></div>
-  
+  <div class="bg-gray-400">
+  <div class="container mx-auto">
+    <p class="flex flex-row justify-baseline  items-center py-1 px-4 md:px-40  text-black text-sm">
+      Monday, June 24, 2024, 13:57 Time zone in Brasilia - Federal District (GMT-3)
+    </p>
+  </div>
+</div>
+    
+    <div class="container  mx-auto">
+      <!-- NAVBAR -->
+      <div id="navbar"></div>
         <!-- Searcher bar -->
-        <div class="flex flex-col lg:flex-row justify-between  lg:mx-30">
+        <div class="flex flex-col lg:flex-row justify-between mt-12 lg:mx-40">
             <div>
-                <div class="text-2xl mb-3 lg:text-4xl">Weather Forecast </div>
-                <div id="dateweather" class="font-light"> </div>
+                <div class="text-2xl font-bold mb-3 lg:text-4xl">Weather Forecast </div>
+                <div id="dateweather" class=" text-gray-500 "> </div>
             </div>
 
-            <div>
-                <div class="flex my-1 border rounded-4xl px-3">
-                  <a id="Search" class="pt-1"><img src="./assets/icon/search.png" alt=""></a>
-                  <input id="cityInput" class="my-1 px-5  flex items-center bg-transparent focus:bg-transparent focus:outline-none " type="text" placeholder="New York ">
-                </div>
-            </div>
+<div class="flex justify-start my-4">
+  <div class="flex items-center border border-gray-300 rounded-full px-4 py-2 w-130  bg-gray-200">
+    <!-- Search icon -->
+    <a id="Search" class="mr-3 cursor-pointer flex items-center">
+      <img src="./assets/icon/search.png" alt="Search" class="w-5 h-5">
+    </a>
+   
+    <!-- Input field -->
+    <input
+      id="cityInput"
+      type="text"
+      placeholder="New York"
+      class="flex-1 bg-transparent focus:outline-none text-gray-700 placeholder-gray-400">
+  </div>
+</div>
         </div>
-        
             <!-- banner -->
-            <div class="relative  lg:mx-30 my-10 ">
+            <div class="relative  lg:mx-40 my-10 ">
       <img src="./assets/images/Rectangle 6.png" alt="" class="w-full  h-120 lg:h-80 object-cover rounded-xl">
       <div class="absolute inset-0 flex flex-col lg:flex-row justify-center  lg:justify-between items-center px-10 text-white">
-        <div class="flex flex-col justify-between gap-4">
+        <div class="flex flex-col justify-between gap-4 ml-20">
           <div>
             <h1 id="cityname" class=" text-3xl font-bold "></h1>
             <p id="country" class="text-lg text-gray-200 "></p>
           </div>
           <div id="tempindex" class="text-6xl font-bold"></div>
         </div>
-        <div class="flex flex-col items-start gap-2 text-lg">
-          <img id="weathericon" src="" alt="">
 
-         <div class="flex"><p id="desc"></p></div>
-         <div class="flex"><img src="./assets/icon/arrow-up.png" alt=""><p id="temp_max"></p></div> 
-         <div class="flex"><img class="rotate-180" src="./assets/icon/arrow-up.png" alt=""><p id="temp_min"></p></div> 
-         <div class="flex"><img src="./assets/icon/Vector (1).png" alt=""><p id="wind"></p></div> 
-         <div class="flex" ><img src="./assets/icon/droplet.png" alt=""><p id="humidity"></p></div> 
+        <div class="flex flex-col items-start gap-2 text-lg mr-20">
+          <img id="weathericon" class=" -mb-7" src="" alt="">
+         <div class="flex"><p id="desc" class="mb-3"></p></div>
+         <div class="flex"><img src="./assets/icon/arrow-up.png"  alt=""><p id="temp_max" class="ml-5" ></p></div> 
+         <div class="flex"><img class="rotate-180" src="./assets/icon/arrow-up.png" alt=""><p id="temp_min" class="ml-5"></p></div> 
+         <div class="flex"><img src="./assets/icon/Vector (1).png" alt=""><p id="wind" class="ml-5"></p></div> 
+         <div class="flex" ><img src="./assets/icon/droplet.png" alt=""><p id="humidity" class="ml-5"></p></div> 
         </div>
       </div>
     </div>
 
-    <div class="flex flex-row  gap-6 my-6 lg:mx-30">
-      <button id="Today"  class="px-5 py-2 rounded-xl text-2xl focus:font-bold">Today</button>
-      <button id="Week" class="px-5 py-2 rounded-xl text-2xl focus:font-bold">Week</button>
+    <div class="flex flex-row  gap-6 my-6 lg:mx-40 justify-between">
+      <div>
+        <button id="Today"  class="px-5 py-2 rounded-xl text-2xl focus:font-bold">Today</button>
+        <button id="Week" class="px-5 py-2 rounded-xl text-2xl focus:font-bold">Week</button>
+      </div>
+
+      <div>
+        <button id="Celsius" class="px-3 py-2 focus:bg-violet-500 rounded-4xl text-2xl focus:text-white mr-5">°C</button>
+        <button id="Fahrenheit" class="px-3 py-2 focus:bg-violet-500 rounded-4xl text-2xl focus:text-white">°F</button>
+      </div>
     </div>
 
 
     <!-- Forecast Cards -->
-    <div id="Forecast" class="lg:mx-30  grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 ">
+    <div id="Forecast" class="lg:mx-40  grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 ">
     </div>
 
     <!-- Highlight Section -->
-    <div class="justify-start w-1/2   lg:mx-24 my-10 lg:px-6">
-      <h2 class="text-2xl font-semibold mb-5">Today's Highlight</h2>
-      
-      <div class="flex flex-row gap-5"> 
+    <div class="justify-start  lg:w-150   lg:mx-35 my-10 lg:px-6">
+      <h2 class="text-2xl font-semibold my-14">Today's Highlight</h2>
+      <div class="flex flex-col  lg:flex-row  gap-5">
         
-        <div class="flex-1 bg-gray-200 rounded-xl border-2 border-gray-500 p-5">
-          <p id="highlightDate"></p>
-          <div class="text-lg font-bold flex "> 
-            <div class="flex ">
+        <div class="flex-1 bg-gray-200 rounded-3xl border-4 border-gray-500 p-5">
+          <p id="highlightDate" class="font-semibold"></p>
+          <div class="text-lg font-bold flex ">
+            <div class="flex">
               <img src="./assets/icon/arrow-up (1).png" alt="">
-              <p id="highHighlight" class="pr-20"> </p> 
-            </div> 
+              <p id="highHighlight" class=" pr-10 pl-5"> </p> 
+            </div>
              <div class="flex">
                 <img class="rotate-180" src="./assets/icon/arrow-up (1).png" alt="">
-               <p id="lowHighlight"></p> </div>
+               <p id="lowHighlight"class="pl-5" ></p></div>
               </div>
         </div>
-       
-        <div class="flex-1 bg-gray-200 rounded-xl border-2 border-gray-500 p-5">
-          <p class="text-sm">Temp Variation</p>
+
+        <div class="flex-col pl-20 pr-20  bg-gray-200 rounded-3xl border-4 border-gray-500 p-5">
+          <p class="text-sm  font-semibold">Temp Variation</p>
           <p id="variation" class="text-lg font-bold"></p>
         </div>
       </div>
     </div>
 
     <!-- Breaking News -->
-            <div id="barkingnewscomponet" class="my-20"></div>
+     <div class="mr-50 ml-20">
+       <div id="barkingnewscomponet" class="my-20"></div>
+      </div>
             <!-- ALL News -->
-            <div class="py-5 px-20 mx-20 my-15 flex flex-row justify-center border border-black bg-stone-200 "><button>
-            All New </button></div>
-            </div>
+             <div class="ml-10 mr-10">
+
+               <div class="py-5 px-20 mx-30  my-15 flex flex-row justify-center font-semibold text-2xl  shadow-sm bg-stone-200 "><button>
+                 All news </button></div>
+                </div>
+            
+          </div>
             <div id="footer"></div>
 </body>
-<script>
-</script>
   <script  type="module" src="./weather.js"></script>
 </html>
