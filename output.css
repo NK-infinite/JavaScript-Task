@@ -1503,6 +1503,11 @@
       margin-top: calc(var(--spacing) * -60);
     }
   }
+  .lg\:-mt-70 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * -70);
+    }
+  }
   .lg\:mt-2 {
     @media (width >= 64rem) {
       margin-top: calc(var(--spacing) * 2);
