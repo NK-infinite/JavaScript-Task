@@ -118,7 +118,7 @@ async function loadWeather() {
     const windSpeed = (data?.wind?.speed );
     const humidity = data?.main?.humidity;
      
- for (let i = 0; i < 5; i++) {
+ for (let i = 1; i < 6; i++) {
   //icon
   const weathericon = data2?.list[i]?.weather[0]?.icon
   const iconurl = `http://openweathermap.org/img/wn/${weathericon}@2x.png`
@@ -130,7 +130,7 @@ async function loadWeather() {
   
   document.getElementById('indexforecast').innerHTML += `    
   <div class= " bg-violet-500 flex flex-col  justify-center items-center p-3 rounded-2xl">
-  <p class=" text-white " >${forecasttime == 1 ? `Now` : forecasttime}</p>
+  <p class=" text-white " >${i == 1 ? `Now` : forecasttime}</p>
   <img class="h-10 text-white" src="${iconurl}" alt="">
   <p class=" text-white" >${forecasttemp}°</p>
   </div>`
