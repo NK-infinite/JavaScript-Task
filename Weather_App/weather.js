@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
           link.classList.add("text-purple-600", "font-medium");
           link.classList.remove("text-gray-800");
         } else {
-          link.classList.add("text-gray-800", "hover:text-purple-600");
+          link.classList.add("text-gray-800", );
           link.classList.remove("text-purple-600", "font-medium");
         }
       });
